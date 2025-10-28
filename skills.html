@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Noel Liman</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Noel <span>Liman</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="experience.html" class="nav-item">Experience</a></li>
+                    <li><a href="education.html" class="nav-item">Education</a></li>
+                    <li><a href="projects.html" class="nav-item">Projects</a></li>
+                    <li><a href="skills.html" class="nav-item">Skills</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>💻 <strong>C++</strong></li>
+                <li>🐍 <strong>Python</strong></li>
+                <li>🌐 <strong>HTML</strong></li>
+                <li>⚙️ <strong>JavaScript</strong></li>
+                <li>🗄️ <strong>SQL</strong></li>
+                <li>📱 <strong>Dart</strong></li>
+                <li>🎨 <strong>Figma</strong></li>
+                <li>🧩 <strong>Canva</strong></li>
+                <li>📊 <strong>Matlab</strong></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Personal Skills</h2>
+            <ul>
+                <li>🗣️ Good communication</li>
+                <li>⚡ Fast learner</li>
+                <li>🤝 Coordination and teamwork</li>
+                <li>💻 Basic computer skills</li>
+                <li>🧩 Problem-solving</li>
+                <li>🌱 Willingness to learn new things</li>
+                <li>🎯 Leadership</li>
+                <li>🎨 Creativity</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Languages</h2>
+            <ul>
+                <li>🇮🇩 Bahasa Indonesia — Native</li>
+                <li>🇬🇧 English — Intermediate</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <a href="contact.html" class="btn" style="display:inline-block;">Next: Contact →</a>
+        </div>
+    </div>
+
+    <footer>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Noel Liman — Portfolio
+    </footer>
+
+    <script>
+        // Tambah class "active" pada link halaman yang sedang dibuka
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-item").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

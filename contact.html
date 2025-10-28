@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Noel Liman</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Noel <span>Liman</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="experience.html" class="nav-item">Experience</a></li>
+                    <li><a href="education.html" class="nav-item">Education</a></li>
+                    <li><a href="projects.html" class="nav-item">Projects</a></li>
+                    <li><a href="skills.html" class="nav-item">Skills</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Get in Touch</h2>
+            <p>
+                Interested in collaboration, internship opportunities, or just want to say hello?
+                Feel free to reach out through the form below or connect with me on social media.
+            </p>
+        </div>
+
+        <div class="card">
+            <form action="https://formspree.io/f/xayrkzby" method="POST">
+                <label for="name">Full Name</label><br>
+                <input type="text" id="name" name="name" required
+                    style="width:100%;padding:10px;border-radius:8px;border:none;margin:8px 0;"><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required
+                    style="width:100%;padding:10px;border-radius:8px;border:none;margin:8px 0;"><br>
+
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" rows="5" required
+                    style="width:100%;padding:10px;border-radius:8px;border:none;margin:8px 0;"></textarea><br>
+
+                <button type="submit" class="btn" style="cursor:pointer;">Send Message</button>
+            </form>
+            <p style="font-size:13px;color:var(--muted);margin-top:10px;">
+                (This form uses <a href="https://formspree.io" target="_blank">Formspree</a> for email delivery.)
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Connect with Me</h2>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/noel-liman" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/IkanDongo" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/noel_liman" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:noeliman24@gmail.com" title="Email">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+
+            <ul style="margin-top:20px;list-style:none;padding:0;color:var(--muted);">
+                <li>📧 <a href="mailto:noeliman24@gmail.com">noeliman24@gmail.com</a></li>
+                <li>📱 <a href="tel:+6282112123166">+62 821-1212-3166</a></li>
+                <li>📍 West Jakarta, Indonesia</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <a href="index.html" class="btn" style="display:inline-block;">← Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Noel Liman — Portfolio
+    </footer>
+
+
+    <script>
+        // Tambah class "active" pada link halaman yang sedang dibuka
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-item").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education | Noel Liman</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Noel <span>Liman</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="experience.html" class="nav-item">Experience</a></li>
+                    <li><a href="education.html" class="nav-item">Education</a></li>
+                    <li><a href="projects.html" class="nav-item">Projects</a></li>
+                    <li><a href="skills.html" class="nav-item">Skills</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Education</h2>
+
+            <div class="job">
+                <h3>Universitas Tarumanagara — Bachelor's Degree in Informatics Engineering</h3>
+                <p><i class="fa fa-calendar"></i> July 2023 – Present</p>
+                <p>
+                    Currently pursuing a Bachelor's Degree in Informatics Engineering with a GPA of <strong>3.95 /
+                        4.00</strong>.
+                    Focuses on data analysis, web development, and mobile application development.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Dian Kasih High School — Science Major (IPA)</h3>
+                <p><i class="fa fa-calendar"></i> 2020 – 2023</p>
+                <p>
+                    Graduated from the Science stream, emphasizing analytical thinking and teamwork.
+                    Actively participated in the Student Council (OSIS) as Secretary and Treasurer.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Certifications</h2>
+            <div class="job">
+                <h3>Red Hat System Administration</h3>
+                <p><i class="fa fa-graduation-cap"></i> Red Hat Academy</p>
+                <p>
+                    Completed certification in system administration fundamentals — covering Linux environment setup,
+                    command-line operations, and basic network configuration.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="projects.html" class="btn" style="display:inline-block;">Next: Projects →</a>
+        </div>
+    </div>
+
+    <footer>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Noel Liman — Portfolio
+    </footer>
+
+    <script>
+        // Tambah class "active" pada link halaman yang sedang dibuka
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-item").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

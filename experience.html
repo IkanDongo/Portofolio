@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience | Noel Liman</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Noel <span>Liman</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="experience.html" class="nav-item">Experience</a></li>
+                    <li><a href="education.html" class="nav-item">Education</a></li>
+                    <li><a href="projects.html" class="nav-item">Projects</a></li>
+                    <li><a href="skills.html" class="nav-item">Skills</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <h3>Teaching Assistant — Database System</h3>
+                <p><i class="fa fa-calendar"></i> August 2024 – December 2024</p>
+                <p>
+                    Supported the teaching process by explaining theoretical concepts of database systems,
+                    assisted in SQL practical sessions, resolved technical issues faced by students, and collaborated
+                    with lecturers in improving learning outcomes.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Lecturer (UCCD) — Database System</h3>
+                <p><i class="fa fa-calendar"></i> February 2025 – June 2025</p>
+                <p>
+                    Provided training and guidance to students through the UCCD program,
+                    helping participants understand the practical application of database and SQL,
+                    and encouraged mastery of technical skills for both academic and professional goals.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Teaching Assistant — Numerical Method</h3>
+                <p><i class="fa fa-calendar"></i> August 2025 – Present</p>
+                <p>
+                    Supported the teaching of Numerical Methods by explaining mathematical techniques,
+                    teaching the use of Python and MATLAB for solving numerical problems,
+                    and assisting students in understanding lab materials and technical challenges.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Teaching Assistant — Statistics</h3>
+                <p><i class="fa fa-calendar"></i> August 2025 – Present</p>
+                <p>
+                    Supported the teaching of Statistics by explaining theoretical concepts and applications,
+                    assisting students in problem-solving, and collaborating with lecturers to evaluate and improve the
+                    learning experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Organizational Experience</h2>
+            <div class="job">
+                <h3>Student Council (OSIS) — Dian Kasih High School</h3>
+                <p><i class="fa fa-calendar"></i> July 2020 – December 2022</p>
+                <p><strong>Secretary </strong></p>
+                <p>
+                    Responsible for recording organizational activities, coordinating meetings, and supporting the
+                    smooth execution of school events.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="education.html" class="btn" style="display:inline-block;">Next: Education →</a>
+        </div>
+    </div>
+
+    <footer>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Noel Liman — Portfolio
+    </footer>
+
+    <script>
+        // Tambah class "active" pada link halaman yang sedang dibuka
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-item").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

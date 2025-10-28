@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Noel Liman</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 28px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--card);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-content h3 {
+            margin: 0;
+        }
+
+        .project-content p {
+            margin: 6px 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .project-links a {
+            font-size: 14px;
+            margin-right: 10px;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: #fff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .project-image {
+                height: 180px;
+            }
+        }
+
+        /* Popup Modal */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: zoomIn 0.4s ease;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            color: white;
+            font-size: 36px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .popup-close:hover {
+            color: #ddd;
+            transform: scale(1.1);
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Noel <span>Liman</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="experience.html" class="nav-item">Experience</a></li>
+                    <li><a href="education.html" class="nav-item">Education</a></li>
+                    <li><a href="projects.html" class="nav-item">Projects</a></li>
+                    <li><a href="skills.html" class="nav-item">Skills</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Featured Projects</h2>
+            <p>Click any image below to preview it in full size.</p>
+        </div>
+
+        <!-- AINIZER -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/ainizer.png')">
+                <img src="assets/projects/ainizer.png" alt="AInizer Project" />
+            </div>
+            <div class="project-content">
+                <h3>AInizer</h3>
+                <p>
+                    Designed and developed a file-sorting website using <strong>Figma</strong> for UI/UX and
+                    <strong>JavaScript</strong> for functionality. Participated in every stage of the SDLC.
+                </p>
+                <div class="project-links">
+                    🔗 <a href="https://github.com/Hendry535230151/AI" target="_blank">GitHub Repository</a> |
+                    🎥 <a href="https://youtu.be/go2F5eKexec" target="_blank">Demo Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILE SHARING -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/file-sharing.png')">
+                <img src="assets/projects/file-sharing.png" alt="File Sharing Protocol Project" />
+            </div>
+            <div class="project-content">
+                <h3>File Sharing Protocol Based on Python Network Programming</h3>
+                <p>
+                    Built a distributed file-sharing system using <strong>Python</strong> and tested in
+                    <strong>GNS3</strong> & <strong>Oracle VirtualBox</strong>. Designed to optimize data transfer
+                    between
+                    multiple nodes efficiently.
+                </p>
+                <div class="project-links">
+                    🎥 <a href="https://drive.google.com/file/d/1GFBOGSaCRHEXB-4D_qqX496BGxYa7gpN/view"
+                        target="_blank">Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEAL GO -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/mealgo.png')">
+                <img src="assets/projects/mealgo.png" alt="Meal Go Project" />
+            </div>
+            <div class="project-content">
+                <h3>Meal Go (Flutter)</h3>
+                <p>
+                    Developed a mobile food delivery application using <strong>Flutter</strong>. Collaborated on both
+                    backend and frontend to deliver a seamless group-based food ordering experience.
+                </p>
+                <div class="project-links">
+                    🔗 <a href="https://github.com/MakotoMachiYuki/Meal-Go" target="_blank">GitHub Repository</a> |
+                    🎥 <a href="https://youtu.be/L5KDKOhNRmw" target="_blank">Demo Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLATFORMER -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/parkour.png')">
+                <img src="assets/projects/parkour.png" alt="Platformer Parkour" />
+            </div>
+            <div class="project-content">
+                <h3>Platformer Parkour (Unity)</h3>
+                <p>
+                    Created a 2D platformer game using <strong>Unity</strong>, focusing on character control, parkour
+                    mechanics, and level design.
+                </p>
+                <div class="project-links">
+                    🎥 <a href="https://youtu.be/L5KDKOhNRmw" target="_blank">Demo Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CODEGRAM -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/codegram.png')">
+                <img src="assets/projects/codegram.png" alt="Codegram Project" />
+            </div>
+            <div class="project-content">
+                <h3>Codegram (Laravel)</h3>
+                <p>
+                    Developed a social-media-themed web application using <strong>Laravel</strong>. Implemented features
+                    such as user posts, authentication, and interactive components.
+                </p>
+                <div class="project-links">
+                    🎥 <a href="https://youtu.be/F4tY13E2c5U?si=SCFv95Ws0Vx_RRAC" target="_blank">Demo Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEBSTYLE -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/webstyle.png')">
+                <img src="assets/projects/webstyle.png" alt="WebStyle Project" />
+            </div>
+            <div class="project-content">
+                <h3>WebStyle (Laravel)</h3>
+                <p>
+                    Created a lifestyle e-commerce platform using <strong>Laravel</strong>, allowing users to browse and
+                    purchase fashion-related products with a modern UI.
+                </p>
+                <div class="project-links">
+                    🔗 <a href="https://github.com/MakotoMachiYuki/BackEnd-Final-Kel2" target="_blank">GitHub
+                        Repository</a> |
+                    🎥 <a href="https://youtu.be/go2F5eKexec" target="_blank">Demo Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- POTATO -->
+        <div class="project-card">
+            <div class="project-image" onclick="openPopup('assets/projects/potato.png')">
+                <img src="assets/projects/potato.png" alt="Potato Leaf Project" />
+            </div>
+            <div class="project-content">
+                <h3>Potato Leaf Disease Classification Using GLCM, PCA & KNN</h3>
+                <p>
+                    Machine learning project focusing on <strong>image processing</strong> to classify potato leaf
+                    diseases using
+                    <strong>GLCM</strong> for texture analysis, <strong>PCA</strong> for feature reduction, and
+                    <strong>KNN</strong> for classification.
+                </p>
+                <div class="project-links">
+                    🔗 <a
+                        href="https://untarid-my.sharepoint.com/:w:/g/personal/noel_535230067_stu_untar_ac_id/EfoBh8V27AZAhGm2c9HQDawBhd7z0qdJPTimc2klXNuwZg?e=umraCv"
+                        target="_blank">Documentation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="skills.html" class="btn">Next: Skills →</a>
+        </div>
+    </div>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Project Preview" />
+    </div>
+
+    <footer>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Noel Liman — Portfolio
+    </footer>
+
+    <script>
+        function openPopup(src) {
+            const popup = document.getElementById("popup");
+            const popupImg = document.getElementById("popup-img");
+            popupImg.src = src;
+            popup.style.display = "flex";
+        }
+
+        function closePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closePopup();
+        });
+    </script>
+
+    <script>
+        // Tambah class "active" pada link halaman yang sedang dibuka
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-item").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
